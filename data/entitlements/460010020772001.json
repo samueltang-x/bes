@@ -1,0 +1,14 @@
+{
+    "status": 6000,
+    "response": [
+        {
+            "entitlement-name": "esim",
+            "entitlement-status": 6100
+        },
+        {
+            "entitlement-name": "getPhoneNumber",
+            "entitlement-status": 6100
+        }
+    ]
+}
+
