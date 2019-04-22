@@ -1,1 +1,5 @@
-log/
+venv
+dist
+__pycache__
+log/*.log
+.vscode

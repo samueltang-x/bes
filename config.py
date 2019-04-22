@@ -1,4 +1,4 @@
-IP = '10.175.147.186'
+IP = '192.168.56.103'
 PORT = 28080
 HTTPS_PORT = 28081
 SSL_CERTIFICATE = './ssl/pic_chain_wildcard.pem'

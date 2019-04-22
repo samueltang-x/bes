@@ -1,0 +1,4 @@
+## 1.0.0 (2019-04-22)
+* use default view function for all requests
+* add router.conf to control how to find response files
+* migrate to python3
