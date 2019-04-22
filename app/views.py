@@ -197,7 +197,7 @@ def get_res_file(req, path):
   path = path.lstrip('/')
 
   config = configparser.ConfigParser()
-  config.read(r'router.conf')
+  config.read(r'config/router.conf')
 
   if not config.has_section(path):
     logger.debug('no config found for /' + path)
