@@ -1,3 +1,6 @@
+## 1.1.2 (2019-05-10)
+* fix bug that debug log is alway enabled.
+
 ## 1.1.1 (2019-04-22)
 * add run_https.spec
 * update requirements.txt to include PyInstaller
