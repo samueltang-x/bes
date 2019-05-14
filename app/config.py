@@ -39,8 +39,8 @@ def create_ssl_ctx(config):
     logger.info('client cert authentication enabled.')
     ssl_ctx.verify_mode = ssl.CERT_REQUIRED
 
-    ca_file = ssl_conf('ca_file', '')
-    ca_path = ssl_conf('ca_path', '')
+    ca_file = ssl_conf.get('ca_file', '')
+    ca_path = ssl_conf.get('ca_path', '')
 
     if (not ca_file) and (not ca_path):
       raise ValueError('as least one of ca_file and ca_path should be configured when client cert auth enabled')
@@ -70,6 +70,7 @@ def create_srv_options():
 
   if https:
     options['ssl_context'] = create_ssl_ctx(config)
+    options['port'] = config['ssl'].get('https_port', '18081')
 
   logger.info('server options: ' + str(options))
   return options

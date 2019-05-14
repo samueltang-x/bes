@@ -12,7 +12,7 @@ data_files = [
 ]
 
 
-a = Analysis(['run_https.py'],
+a = Analysis(['run.py'],
              pathex=['/root/ses/bes'],
              binaries=[],
              datas=data_files,
