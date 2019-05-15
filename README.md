@@ -31,6 +31,9 @@
     ./bes.sh stop
 	
 ## setup development environment
-`pip3 install -r requirements.txt`
+change directory to root dir of the repo, then run below commands.
+
+    source venv/bin/activate
+    pip3 install -r requirements.txt
 
 exantng/xiangyuan.tang@ericsson.com
