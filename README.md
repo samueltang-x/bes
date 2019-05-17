@@ -16,6 +16,7 @@
 
 	
 ## setup development environment
+Requirement: Python 3.7<br>
 change directory to root dir of the repo, then run below commands.
 
     source venv/bin/activate
