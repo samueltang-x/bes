@@ -32,14 +32,6 @@ function logger()
     local default_log_file="${caller%.*}.log"
     local log_file="${3:-${default_log_file}}"
     local time_format=${4:-%F %T.%4N}
-
-    #echo "caller: $caller"
-    #echo "log_message: $log_message"
-    #echo "default_log_file: $default_log_file"
-    #echo "log_file: $log_file"
-    #echo "event_level: $event_level"
-    #echo "time_format: $time_format"
-
     local rediret_to_standard_out=${__redirect_to_standard_out:=FALSE}
     local logging_level=${__logging_level:=INFO}
     log_file=${__logger_log_file:=${log_file}}
@@ -47,7 +39,6 @@ function logger()
 
     local log_time=$(date +"$time_format")
     local field_separator=' '
-    #echo "log_time: $log_time"
 
     # Convert to uppercase.
     # Updated in version V-1.0.3
@@ -61,10 +52,6 @@ function logger()
     # Map level strings to relevant numbers.
     logging_level_index=$(echo -e "ERROR:40\nWARNING:30\nINFO:20\nDEBUG:10" | grep ${logging_level} | cut -d':' -f2)
     event_level_index=$(echo -e "ERROR:40\nWARNING:30\nINFO:20\nDEBUG:10" | grep ${event_level} | cut -d':' -f2)
-    #echo "logging_level: ${logging_level}"
-    #echo "event_level: ${event_level}"
-    #echo "logging_level_index: $logging_level_index"
-    #echo "event_level_index: $event_level_index"
 
     # Set font color to Red for ERROR and WARNING events.
     if [ "X${event_level}" == "XERROR" -o "X${event_level}" == "XWARNING" ]
