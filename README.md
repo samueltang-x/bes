@@ -10,9 +10,14 @@
     `response.file.filter`: to specify how to find the name of response files from directory `data`, vaule should be separaterd with semicomma.
     Support values as below:
 
-        path: the URI path of request
+        path: the URI path of request (the slash '/' will be replaced with '-' as actual filename)
         body.imsi: the value of attribute imsi in body, (request.json). Multiple and nested attributes could be used.
         args.eid: the value of argment eid in query string. Multiple argments could be used.
+		
+        for example, with config
+	        [factory/product]
+	        response.file.filter = path, args.id, body.category
+	    request GET /factory/product?id=123 -H 'content:type: application/json' -d '{"category":"IT"}' will try get response with content from file data/factory-product_123.json.
 
 	
 ## setup development environment
