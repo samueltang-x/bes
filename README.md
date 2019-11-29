@@ -7,7 +7,7 @@
 
 1. config/router.conf
 
-    `response.file.filter`: to specify how to find the name of response files, vaule should be separaterd with semicomma.
+    `response.file.filter`: to specify how to find the name of response files from directory `data`, vaule should be separaterd with semicomma.
     Support values as below:
 
         path: the URI path of request
