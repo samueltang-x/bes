@@ -12,12 +12,12 @@
 
         path: the URI path of request (the slash '/' will be replaced with '-' as actual filename)
         body.imsi: the value of attribute imsi in body, (request.json). Multiple and nested attributes could be used.
-        args.eid: the value of argment eid in query string. Multiple argments could be used.
+        args.eid: the value of argument eid in query string. Multiple argments could be used.
 		
         for example, with config
 	        [factory/product]
 	        response.file.filter = path, args.id, body.category
-	    request GET /factory/product?id=123 -H 'content:type: application/json' -d '{"category":"IT"}' will try get response with content from file data/factory-product_123.json.
+	    request GET /factory/product?id=123 -H 'content:type: application/json' -d '{"category":"IT"}' will try get response with content from file data/factory-product_123_IT.json.
 
 	
 ## setup development environment
