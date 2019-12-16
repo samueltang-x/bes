@@ -80,7 +80,7 @@ def default_view(path):
     res_data = json.load(file_handler)
 
   if (isinstance(res_data['body'], str)):
-    res_body = res_body['body']
+    res_body = res_data['body']
   else:
     res_body = json.dumps(res_data['body'])
 
