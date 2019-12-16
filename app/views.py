@@ -79,5 +79,10 @@ def default_view(path):
   with open(res_file) as file_handler:
     res_data = json.load(file_handler)
 
+  if (isinstance(res_data['body'], str)):
+    res_body = res_body['body']
+  else:
+    res_body = json.dumps(res_data['body'])
+
   logger.debug('respond client, status: {status}\nheader: {header}\nbody: {body}'.format_map(res_data))
-  return (json.dumps(res_data['body']), res_data['status'], res_data['header'])
+  return (res_body, res_data['status'], res_data['header'])

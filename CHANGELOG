@@ -1,3 +1,6 @@
+## 1.3.0 (2019-12-16)
+* add support to build body from string
+
 ## 1.2.0 (2019-10-09)
 * remove obsoleted code
 
